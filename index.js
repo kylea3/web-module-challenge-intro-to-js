@@ -188,9 +188,31 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+let computer = Math.floor(Math.random() * (2 + 1));
+console.log(computer)
+if (computer === 0) {
+  computer = 'rock'
+} else if (computer === 1) {
+  computer = 'paper'
+} else {
+  computer = 'scissors'
 }
+console.log(computer);
+
+function game(user, computer){
+  if (user === 'rock' && computer === 'scissors') {
+    return "you win!"
+  } else if (user === 'paper' && computer === 'rock') {
+    return 'you win!'
+  } else if (user === 'scissors' && computer === 'paper') {
+    return 'you win!'
+  } else if (user === computer) {
+    return "it's a tie"
+  } else {
+    return 'you lose!'
+  }
+}
+console.log(game('scissors', computer));
 
 
 
@@ -205,11 +227,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return kilometers * .621371
 }
 
-
+console.log(miles(10));
 
 //Task 5b - Centimeters to Feet
 /*
@@ -219,9 +241,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
+console.log(feet(30.48))
 
 
 
