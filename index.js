@@ -99,6 +99,7 @@ function dogYears(age){
   return age * 7;
 }
 
+dogYears(5);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -147,10 +148,23 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, years){
+  if (weight < 5 && years >= 1) {
+    return weight * .05
+  } else if (weight >= 5 && weight <= 10 && years >=1) {
+    return weight * .04
+  } else if (weight >= 11 && weight <= 15 && years >=1) {
+    return weight * .03
+  } else if (weight > 15 && years >=1) {
+    return weight * .02
+  } else if (years > .16 && years <= .33) {
+    return weight * .1
+  } else if (years > .33 && years <= .58) {
+    return weight * .05
+  } else if (years > .58 && years < 1) {
+    return weight * .04
+  }
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
